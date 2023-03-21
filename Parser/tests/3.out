@@ -1,0 +1,9 @@
+UNKNOWN_NAME
+|__ BLOCK
+|   |__ VAR_DECL
+|   |   |__ a
+|   |   |__ integer
+|   |__ COMPOUND
+|   |   |__ :=
+|   |   |   |__ a
+|   |   |   |__ 38

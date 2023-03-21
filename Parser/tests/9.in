@@ -1,0 +1,54 @@
+program test5;
+var
+        s, res_system : string;
+        iterator, o_iterator, ss : integer;
+        sum, counter, base : integer;
+begin
+        readln(s);
+        s := LowerCase(s);
+        format := False;
+        iterator := 2;
+        counter := 1;
+        if s[iterator - 1] = '-' then
+                iterator := iterator + 1;
+        if (iterator > Length(s)) then
+                format := True;
+        o_iterator := iterator;
+        if not TryStrToInt(s, ss) then
+                format := True;
+        {while o_iterator <= Length(s) do
+                begin
+                        if (pos(s[o_iterator], res_system) = 0) then
+                                begin
+                                        format := True;
+                                        break
+                                end;
+                        Inc(o_iterator);
+                end;}
+        if format then
+                writeln('1')
+        else
+                begin
+                        sum := 0;
+                        o_iterator := Length(s);
+                        while (o_iterator >= iterator) do
+                                begin
+                                        if (s[1] = '-') then
+                                                sum := sum - counter * (pos(s[o_iterator], res_system) - 1)
+                                        else
+                                                sum := sum + counter * (pos(s[o_iterator], res_system) - 1);
+                                        counter := counter * base;
+                                        Dec(o_iterator);
+                                        if ((sum > 2147483647) or (sum < -2147483648)) then
+                                                begin
+                                                        overflow := True;
+                                                        break;
+                                                end;
+                                end;
+                        if overflow then
+                                writeln('2')
+                        else
+                                writeln('0' + sLineBreak + IntToStr(sum));
+                end;
+        readln;
+end.

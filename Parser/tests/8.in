@@ -1,0 +1,6 @@
+var a,n:integer;
+begin { основная программа }
+    n:=1;
+    while n <= 0  do begin
+    end;
+end.

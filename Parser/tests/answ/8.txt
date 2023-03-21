@@ -1,0 +1,17 @@
+UNKNOWN_NAME
+|__ BLOCK
+|   |__ VAR_DECL
+|   |   |__ a
+|   |   |__ integer
+|   |__ VAR_DECL
+|   |   |__ n
+|   |   |__ integer
+|   |__ COMPOUND
+|   |   |__ :=
+|   |   |   |__ n
+|   |   |   |__ 1
+|   |   |__ while
+|   |   |   |__ <=
+|   |   |   |   |__ n
+|   |   |   |   |__ 0
+|   |   |   |__ COMPOUND

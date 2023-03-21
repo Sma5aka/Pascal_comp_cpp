@@ -1,0 +1,10 @@
+1	1	KWord		program
+9	1	Id		Hello
+14	1	Dlmtr		;
+1	2	KWord		begin
+3	3	KWord		writeln
+11	3	Dlmtr		(
+12	3	String		Hello World
+25	3	Dlmtr		)
+1	4	KWord		end
+4	4	Dlmtr		.
